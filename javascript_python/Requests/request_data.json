@@ -1,0 +1,2286 @@
+// config file to load the CRM web application
+
+{
+    "layers": {
+        "Addresses": {
+            "Name": "Addresses",
+            "OBJECTID": 9,
+            "Geometry": "Point",
+            "LayerNo": 1,
+            "Path": "DGspa/MapServer/",
+            "Type": "All"
+        },
+        "Parcels": {
+            "Name": "Parcels",
+            "OBJECTID": 10,
+            "Geometry": "Polygon",
+            "LayerNo": 2,
+            "Path": "DGspa/MapServer/",
+            "Type": "All"
+        },
+        "Storm Call Log 1996": {
+            "Name": "Storm Call Log 1996",
+            "OBJECTID": 4,
+            "Geometry": "Point",
+            "LayerNo": 3,
+            "Path": "Drainage/MapServer/",
+            "Type": "Drainage"
+        },
+        "Storm Call Log 1997": {
+            "Name": "Storm Call Log 1997",
+            "OBJECTID": 3,
+            "Geometry": "Point",
+            "LayerNo": 2,
+            "Path": "Drainage/MapServer/",
+            "Type": "Drainage"
+        },
+        "Storm Call Log 2006": {
+            "Name": "Storm Call Log 2006",
+            "OBJECTID": 2,
+            "Geometry": "Point",
+            "LayerNo": 1,
+            "Path": "Drainage/MapServer/",
+            "Type": "Drainage"
+        },
+        "Storm Call Log 2013": {
+            "Name": "Storm Call Log 2013",
+            "OBJECTID": 1,
+            "Geometry": "Point",
+            "LayerNo": 0,
+            "Path": "Drainage/MapServer/",
+            "Type": "Drainage"
+        },
+        "Storm Pipes": {
+            "Name": "Storm Pipes",
+            "OBJECTID": 6,
+            "Geometry": "Polyline",
+            "LayerNo": 4,
+            "Path": "Utility/MapServer/",
+            "Type": "Drainage"
+        },
+        "Storm Points": {
+            "Name": "Storm Points",
+            "OBJECTID": 7,
+            "Geometry": "Point",
+            "LayerNo": 3,
+            "Path": "Utility/MapServer/",
+            "Type": "Drainage"
+        },
+        "Village Boundary": {
+            "Name": "Village Boundary",
+            "OBJECTID": 8,
+            "Geometry": "Polygon",
+            "LayerNo": 0,
+            "Path": "DGspa/MapServer/",
+            "Type": "All"
+        },
+        "WIIP Study Areas": {
+            "Name": "WIIP Study Areas",
+            "OBJECTID": 5,
+            "Geometry": "Polygon",
+            "LayerNo": 4,
+            "Path": "Drainage/MapServer/",
+            "Type": "Drainage"
+        }
+    },
+    "timeFrames": {
+        "60": "2 Months",
+        "270": "9 Months",
+        "180": "6 Months",
+        "365": "1 Year",
+        "7": "Week",
+        "90": "3 Months",
+        "30": "1 Month",
+        "999": "1 Year +"
+    },
+    "violationtypes": {
+        "Accessory Structures": {
+            "Description": "Accessory Structures 302.7 3",
+            "OBJECTID": 3,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "302.7",
+            "Name": "Accessory Structures"
+        },
+        "Accumulation of Rubbish": {
+            "Description": "Property must be free of trash and debris.",
+            "OBJECTID": 1,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "307.1",
+            "Name": "Accumulation of Rubbish"
+        },
+        "Doors": {
+            "Description": "Doors 304.15 11",
+            "OBJECTID": 11,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "304.15",
+            "Name": "Doors"
+        },
+        "Exterior Structure": {
+            "Description": "Exterior Structure 304.1 5",
+            "OBJECTID": 5,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "304.1",
+            "Name": "Exterior Structure"
+        },
+        "Glazing (Windows)": {
+            "Description": "Glazing (Windows) 304.13.1 10",
+            "OBJECTID": 10,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "304.13.1",
+            "Name": "Glazing (Windows)"
+        },
+        "Infestation": {
+            "Description": "Infestation 308.1 13",
+            "OBJECTID": 13,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "308.1",
+            "Name": "Infestation"
+        },
+        "Interior Structure": {
+            "Description": "Interior Structure 305.1 12",
+            "OBJECTID": 12,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "305.1",
+            "Name": "Interior Structure"
+        },
+        "Motor Vehicles": {
+            "Description": "Motor Vehicles 302.8 4",
+            "OBJECTID": 4,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "302.8",
+            "Name": "Motor Vehicles"
+        },
+        "Nuisances (Various)": {
+            "Description": "Nuisances (Various) 13.7 16",
+            "OBJECTID": 16,
+            "ComplianceTime": 7,
+            "Source": "DGMC",
+            "SectionNumber": "13.7",
+            "Name": "Nuisances (Various)"
+        },
+        "Premises Indentification": {
+            "Description": "Premises Indentification 304.3 7",
+            "OBJECTID": 7,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "304.3",
+            "Name": "Premises Indentification"
+        },
+        "Prohibited Signs": {
+            "Description": "Prohibited Signs 28.9.020 18",
+            "OBJECTID": 18,
+            "ComplianceTime": 7,
+            "Source": "DGMC",
+            "SectionNumber": "28.9.020",
+            "Name": "Prohibited Signs"
+        },
+        "Protective Treatment": {
+            "Description": "Protective Treatment 304.2 6",
+            "OBJECTID": 6,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "304.2",
+            "Name": "Protective Treatment"
+        },
+        "Roofs and Drainage": {
+            "Description": "Roofs and Drainage 304.7 8",
+            "OBJECTID": 8,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "304.7",
+            "Name": "Roofs and Drainage"
+        },
+        "Sandwich Board Signs": {
+            "Description": "Sandwich Board Signs 28.9.060(L) 21",
+            "OBJECTID": 21,
+            "ComplianceTime": 7,
+            "Source": "DGMC",
+            "SectionNumber": "28.9.060(L)",
+            "Name": "Sandwich Board Signs"
+        },
+        "Sanitary Drainage System": {
+            "Description": "Sanitary Drainage System 506.2 15",
+            "OBJECTID": 15,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "506.2",
+            "Name": "Sanitary Drainage System"
+        },
+        "Stairways, Decks, porches, and balconies": {
+            "Description": "Stairways, Decks, porches, and balconies 304.10 9",
+            "OBJECTID": 9,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "304.10",
+            "Name": "Stairways, Decks, porches, and balconies"
+        },
+        "Temporary Signs": {
+            "Description": "Temporary Signs 28.9.040 19",
+            "OBJECTID": 19,
+            "ComplianceTime": 7,
+            "Source": "DGMC",
+            "SectionNumber": "28.9.040",
+            "Name": "Temporary Signs"
+        },
+        "Vegetation Obstructions": {
+            "Description": "Vegetation Obstructions 14.4(f) 17",
+            "OBJECTID": 17,
+            "ComplianceTime": 7,
+            "Source": "DGMC",
+            "SectionNumber": "14.4(f)",
+            "Name": "Vegetation Obstructions"
+        },
+        "Water Supply System": {
+            "Description": "Water Supply System 505.3 14",
+            "OBJECTID": 14,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "505.3",
+            "Name": "Water Supply System"
+        },
+        "Weeds/Grass": {
+            "Description": "Grass must be cut.",
+            "OBJECTID": 2,
+            "ComplianceTime": 7,
+            "Source": "2006 IMPC",
+            "SectionNumber": "302.4",
+            "Name": "Weeds/Grass"
+        },
+        "Window Signs": {
+            "Description": "Window Signs 28.9.050(H) 20",
+            "OBJECTID": 20,
+            "ComplianceTime": 7,
+            "Source": "DGMC",
+            "SectionNumber": "28.9.050(H)",
+            "Name": "Window Signs"
+        }
+    },
+    "statusCodes": ["All Open", "New Request", "Need Site Visit", "Need to Contact", "Waiting on Resident", "Assign to Street Division", "Cost Share", "Investigation", "Unknown", "Completed", "Outside Jurisdiction"],
+    "employees": {
+        "1147": {
+            "deptText": "Public Works",
+            "name": "MASEK, JOANNE M",
+            "phone": "(###)###-####",
+            "title": "PW ADMIN. SECRETARY 2",
+            "dept": 9,
+            "email": "jmasek@downers.us"
+        },
+        "1145": {
+            "deptText": "Public Works",
+            "name": "DAULTON LANGE, KAREN",
+            "phone": "(630) 434-5489",
+            "title": "PW STORMWA  ADMIN./ENGINEER",
+            "dept": 9,
+            "email": "kdlange@downers.us"
+        },
+        "1260": {
+            "deptText": "Community Development",
+            "name": "BEHR, KERRY K",
+            "phone": "(630) 434-5941",
+            "title": "CD STAFF ENGINEER 2 DEVELOPMEN",
+            "dept": 3,
+            "email": "kbehr@downers.us"
+        },
+        "1265": {
+            "deptText": "Community Development",
+            "name": "LOMAX, JULIE A",
+            "phone": "(630) 493-8825",
+            "title": "CD STAFF ENGINEER 2 DEVELOPMNT",
+            "dept": 3,
+            "email": "jlomax@downers.us"
+        },
+        "131": {
+            "deptText": "Public Works",
+            "name": "EBEL, RICHARD W",
+            "phone": "(630) 434-5468",
+            "title": "PW MANAGER,STREETS/FIELD SVCS.",
+            "dept": 9,
+            "email": "rebel@downers.us"
+        },
+        "20": {
+            "deptText": "Manager's Office",
+            "name": "FITZPATRICK, DANN S",
+            "phone": "(###)###-####",
+            "title": "BM MANAGER, BUILDING SERVICES",
+            "dept": 7,
+            "email": "dfitzpatrick@downers.us"
+        },
+        "1078": {
+            "deptText": "Community Development",
+            "name": "KALMAR, DEAN D",
+            "phone": "(630) 434-5589",
+            "title": "CD CODE COMPLIANCE OFFICER",
+            "dept": 3,
+            "email": "dkalmar@downers.us"
+        },
+        "450": {
+            "deptText": "Public Works",
+            "name": "VASKO, SCOTT A",
+            "phone": "(###)###-####",
+            "title": "PW STAFF ENGINEER II",
+            "dept": 9,
+            "email": "svasko@downers.us"
+        },
+        "404": {
+            "deptText": "Communications",
+            "name": "CERULLI, JANENE",
+            "phone": "(###)###-####",
+            "title": "MEDIA  PUBLIC RELATIONS SPEC.",
+            "dept": 10,
+            "email": "jcerulli@downers.us"
+        },
+        "545": {
+            "deptText": "Public Works",
+            "name": "FULKERSON JR, CLARENCE L",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "cfulkerson@downers.us"
+        },
+        "1018": {
+            "deptText": "Manager's Office",
+            "name": "NEWLON, NANEIL R",
+            "phone": "(###)###-####",
+            "title": "PW DIR.PUBLIC WKS",
+            "dept": 7,
+            "email": "nnewlon@downers.us"
+        },
+        "287": {
+            "deptText": "Public Works",
+            "name": "BALICKI, STANLEY R",
+            "phone": "(###)###-####",
+            "title": "PW ASST DIR PUBLIC WORKS OPER",
+            "dept": 9,
+            "email": "sbalicki@downers.us"
+        },
+        "1158": {
+            "deptText": "Community Development",
+            "name": "LEFEBVRE, ART",
+            "phone": "(###)###-####",
+            "title": "CD BUILDING INSPECTOR",
+            "dept": 3,
+            "email": "alefebvre@downers.us"
+        },
+        "1092": {
+            "deptText": "Communications",
+            "name": "VLK, SHERYL",
+            "phone": "(###)###-####",
+            "title": "MEDIA COMMUNICATIONS SPEC.",
+            "dept": 10,
+            "email": "svlk@downers.us"
+        },
+        "671": {
+            "deptText": "Manager's Office",
+            "name": "FIELDMAN, DAVID B",
+            "phone": "(###)###-####",
+            "title": "AD VILLAGE MANAGER",
+            "dept": 7,
+            "email": "dfieldman@downers.us"
+        },
+        "262": {
+            "deptText": "Manager's Office",
+            "name": "PRATT, MARY F",
+            "phone": "(###)###-####",
+            "title": "AD EMERGENCY MGMT. COORD.",
+            "dept": 7,
+            "email": "mpratt@downers.us"
+        },
+        "126": {
+            "deptText": "Community Development",
+            "name": "MOUREK, MARK A",
+            "phone": "(###)###-####",
+            "title": "CD PROJECT MANAGER",
+            "dept": 3,
+            "email": "mmourek@downers.us"
+        },
+        "127": {
+            "deptText": "Public Works",
+            "name": "KLINE, TROY W",
+            "phone": "(630) 434-5470",
+            "title": "PW TECHNICIAN",
+            "dept": 9,
+            "email": "tkline@downers.us"
+        },
+        "574": {
+            "deptText": "Public Works",
+            "name": "LEWANDOWSKI, EDWARD M",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "elewandowski@downers.us"
+        },
+        "423": {
+            "deptText": "Public Works",
+            "name": "SOMERSETT, RANDY",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "rsomersett@downers.us"
+        },
+        "1060": {
+            "deptText": "Public Works",
+            "name": "SIKICH, ANDREW J",
+            "phone": "(###)###-####",
+            "title": "PW ASST DIR PW/ENGINEERING",
+            "dept": 9,
+            "email": "asikich@downers.us"
+        },
+        "412": {
+            "deptText": "Community Development",
+            "name": "GORNIK, JUNE J",
+            "phone": "(###)###-####",
+            "title": "CD ADMINISTRATIVE ASSISTANT",
+            "dept": 3,
+            "email": "jgornik@downers.us"
+        },
+        "371": {
+            "deptText": "Public Works",
+            "name": "BOBIKIEWICZ, KEVIN A",
+            "phone": "(630) 434-6812",
+            "title": "PW PUBLIC SERVICES COORDINATOR",
+            "dept": 9,
+            "email": "kbobikiewicz@downers.us"
+        },
+        "823": {
+            "deptText": "Public Works",
+            "name": "TOPOR, TOMASZ J",
+            "phone": "(630) 434-5487",
+            "title": "PW STAFF ENGINEER II",
+            "dept": 9,
+            "email": "ttopor@downers.us"
+        },
+        "1322": {
+            "deptText": "Manager's Office",
+            "name": "KENNEY, BRIAN M",
+            "phone": "(###)###-####",
+            "title": "AD MANAGEMENT FELLOW",
+            "dept": 7,
+            "email": "bkenney@downers.us"
+        },
+        "1323": {
+            "deptText": "Public Works",
+            "name": "SAUL, TIMOTHY J",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "None"
+        },
+        "593": {
+            "deptText": "Community Development",
+            "name": "CONNELL, K. SHARON",
+            "phone": "(###)###-####",
+            "title": "CD ADMIN. SECRETARY 2",
+            "dept": 3,
+            "email": "kconnell@downers.us"
+        },
+        "1321": {
+            "deptText": "Public Works",
+            "name": "MELBY, EDWARD R",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER 1 TEMP",
+            "dept": 9,
+            "email": "None"
+        },
+        "1326": {
+            "deptText": "Public Works",
+            "name": "KORTUM, TOM J",
+            "phone": "(###)###-####",
+            "title": "PW SEASONAL SNOW PLOW DRIVR PT",
+            "dept": 9,
+            "email": "None"
+        },
+        "1327": {
+            "deptText": "Public Works",
+            "name": "TOWERS, MICHAEL A",
+            "phone": "(###)###-####",
+            "title": "PW SEASONAL SNOW PLOW DRIVR PT",
+            "dept": 9,
+            "email": "None"
+        },
+        "1324": {
+            "deptText": "Public Works",
+            "name": "CARLSEN, DANIEL",
+            "phone": "(###)###-####",
+            "title": "PW MANAGEMENT INTERN",
+            "dept": 9,
+            "email": "None"
+        },
+        "1325": {
+            "deptText": "Public Works",
+            "name": "FRANCO, GEORGE M",
+            "phone": "(###)###-####",
+            "title": "PW SEASONAL SNOW PLOW DRIVR PT",
+            "dept": 9,
+            "email": "None"
+        },
+        "599": {
+            "deptText": "Public Works",
+            "name": "KING, NATHAN R",
+            "phone": "(630) 434-5467",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "nking@downers.us"
+        },
+        "1089": {
+            "deptText": "Manager's Office",
+            "name": "DEITCH, ALLISON J",
+            "phone": "(630) 434-5525",
+            "title": "AD OPERATIONAL PERFORMANCE MGR",
+            "dept": 7,
+            "email": "adeitch@downers.us"
+        },
+        "314": {
+            "deptText": "Public Works",
+            "name": "POLCYN, LILLIAN F",
+            "phone": "(###)###-####",
+            "title": "PW TECH-WATER",
+            "dept": 9,
+            "email": "lpolcyn@downers.us"
+        },
+        "9999": {
+            "deptText": "Unassigned",
+            "name": "Unassigned",
+            "phone": "(630)434-5500",
+            "title": "Unassigned",
+            "dept": 9999,
+            "email": "crc@downers.us"
+        },
+        "271": {
+            "deptText": "Public Works",
+            "name": "PATRICK, KELLY J",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER 2",
+            "dept": 9,
+            "email": "kpatrick@downers.us"
+        },
+        "272": {
+            "deptText": "Public Works",
+            "name": "LICCIARDI, FRANK A",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER 2",
+            "dept": 9,
+            "email": "flicciardi@downers.us"
+        },
+        "273": {
+            "deptText": "Public Works",
+            "name": "CHRIST JR, MICHAEL G",
+            "phone": "(###)###-####",
+            "title": "PW TECHNICIAN-ENGINEERING",
+            "dept": 9,
+            "email": "mchristjr@downers.us"
+        },
+        "113": {
+            "deptText": "Manager's Office",
+            "name": "JACKSON, JAMES G",
+            "phone": "(###)###-####",
+            "title": "FD FIRE CHIEF",
+            "dept": 7,
+            "email": "jjackson@downers.us"
+        },
+        "176": {
+            "deptText": "Public Works",
+            "name": "TUCKER, JOHN",
+            "phone": "(630) 434-5466",
+            "title": "PW MANAGER, STREETS/TECH.SVC.",
+            "dept": 9,
+            "email": "jtucker@downers.us"
+        },
+        "278": {
+            "deptText": "Manager's Office",
+            "name": "BROWN, LINDA J",
+            "phone": "(###)###-####",
+            "title": "AD DEP. VILLAGE CLERK",
+            "dept": 7,
+            "email": "lbrown@downers.us"
+        },
+        "398": {
+            "deptText": "Community Development",
+            "name": "MURRAY, LAUREN S",
+            "phone": "(###)###-####",
+            "title": "CD PROJECT MANAGER",
+            "dept": 3,
+            "email": "lmurray@downers.us"
+        },
+        "87": {
+            "deptText": "Public Works",
+            "name": "PAWLOWSKI, DANIEL S",
+            "phone": "(###)###-####",
+            "title": "PW FLEET MAINT. TECH.",
+            "dept": 9,
+            "email": "dpawlowski@downers.us"
+        },
+        "792": {
+            "deptText": "Manager's Office",
+            "name": "BUTTNY, JUDY D",
+            "phone": "(###)###-####",
+            "title": "FIN FINANCE DIRECTOR",
+            "dept": 7,
+            "email": "jbuttny@downers.us"
+        },
+        "1255": {
+            "deptText": "Community Development",
+            "name": "CHRISSE, KELLEY J",
+            "phone": "(###)###-####",
+            "title": "CD PLANNER",
+            "dept": 3,
+            "email": "kchrisse@downers.us"
+        },
+        "520": {
+            "deptText": "Public Works",
+            "name": "BIRD JR, DAVID A",
+            "phone": "(630) 434-5462",
+            "title": "PW MANAGER, WATER I",
+            "dept": 9,
+            "email": "dbird@downers.us"
+        },
+        "7": {
+            "deptText": "Manager's Office",
+            "name": "BURKE, DENNIS E",
+            "phone": "(###)###-####",
+            "title": "HR DIR HUMAN RESOURCES",
+            "dept": 7,
+            "email": "dburke@downers.us"
+        },
+        "917": {
+            "deptText": "Community Development",
+            "name": "HERMAN, JENNIFER L",
+            "phone": "(###)###-####",
+            "title": "CD ADMIN. SEC 2-CODE SERV",
+            "dept": 3,
+            "email": "jherman@downers.us"
+        },
+        "425": {
+            "deptText": "Manager's Office",
+            "name": "HERMAN, WILLIAM F",
+            "phone": "(###)###-####",
+            "title": "IS ASST DIR/INFO SERV.",
+            "dept": 7,
+            "email": "None"
+        },
+        "529": {
+            "deptText": "Public Works",
+            "name": "UNSELL, TONY",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "tunsell@downers.us"
+        },
+        "1139": {
+            "deptText": "Public Works",
+            "name": "KALKE, MARK A",
+            "phone": "(###)###-####",
+            "title": "PW FLEET MAINT. TECH.",
+            "dept": 9,
+            "email": "mkalke@downers.us"
+        },
+        "304": {
+            "deptText": "Public Works",
+            "name": "MCCLAIN, WAYNE R",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "wmcclain@downers.us"
+        },
+        "440": {
+            "deptText": "Communications",
+            "name": "BOBIKIEWICZ, SARAH M",
+            "phone": "(###)###-####",
+            "title": "MEDIA  PUBLICATIONS TECH.",
+            "dept": 10,
+            "email": "sbobikiewicz@downers.us"
+        },
+        "447": {
+            "deptText": "Public Works",
+            "name": "NEUMANN, MICHAEL",
+            "phone": "(###)###-####",
+            "title": "PW ASST. VILLAGE FORESTER",
+            "dept": 9,
+            "email": "mneumann@downers.us"
+        },
+        "1330": {
+            "deptText": "Public Works",
+            "name": "MAYER, MATTHEW T",
+            "phone": "(###)###-####",
+            "title": "PW TRAFFIC ENGINEER MGR.",
+            "dept": 9,
+            "email": "None"
+        },
+        "306": {
+            "deptText": "Manager's Office",
+            "name": "PETRARCA, ENZA I",
+            "phone": "(###)###-####",
+            "title": "LG VILLAGE ATTORNEY",
+            "dept": 7,
+            "email": "epetrarca@downers.us"
+        },
+        "247": {
+            "deptText": "Public Works",
+            "name": "SAMONTE, RICHARD S",
+            "phone": "(###)###-####",
+            "title": "PW SHOP ASSISTANT",
+            "dept": 9,
+            "email": "rsamonte@downers.us"
+        },
+        "243": {
+            "deptText": "Public Works",
+            "name": "HEINRICH, MARY F",
+            "phone": "(###)###-####",
+            "title": "PW MATERIALS COORDINATOR",
+            "dept": 9,
+            "email": "mheinrich@downers.us"
+        },
+        "242": {
+            "deptText": "Public Works",
+            "name": "PUSATERI, ROBERT P",
+            "phone": "(###)###-####",
+            "title": "PW FLEET MAINT. TECH.",
+            "dept": 9,
+            "email": "rpusateri@downers.us"
+        },
+        "389": {
+            "deptText": "Public Works",
+            "name": "NICKELS, MARK A",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER 2",
+            "dept": 9,
+            "email": "mnickels@downers.us"
+        },
+        "248": {
+            "deptText": "Public Works",
+            "name": "KONEZNEY, ROBERT M",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "rkonezney@downers.us"
+        },
+        "842": {
+            "deptText": "Public Works",
+            "name": "TOCK, JAMES P",
+            "phone": "(630) 434-2453",
+            "title": "PW ENGINEERING MANAGER",
+            "dept": 9,
+            "email": "jtock@downers.us"
+        },
+        "841": {
+            "deptText": "Public Works",
+            "name": "KOCHENY, MARTIN E",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "mkocheny@downers.us"
+        },
+        "642": {
+            "deptText": "Community Development",
+            "name": "PERSON, BRUCE D",
+            "phone": "(###)###-####",
+            "title": "CD PLUMBING INSPECTOR PT",
+            "dept": 3,
+            "email": "bperson@downers.us"
+        },
+        "517": {
+            "deptText": "Public Works",
+            "name": "PFURSICH, JOHN F",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER 2",
+            "dept": 9,
+            "email": "jpfursich@downers.us"
+        },
+        "622": {
+            "deptText": "Public Works",
+            "name": "GEORGE, RAE M",
+            "phone": "(###)###-####",
+            "title": "PW ADMIN. ASSISTANT",
+            "dept": 9,
+            "email": "rgeorge@downers.us"
+        },
+        "386": {
+            "deptText": "Manager's Office",
+            "name": "BAKER, MICHAEL D",
+            "phone": "(###)###-####",
+            "title": "AD DEP.VILLAGE MANAGER",
+            "dept": 7,
+            "email": "mbaker@downers.us"
+        },
+        "573": {
+            "deptText": "Public Works",
+            "name": "RIGG, DANTE F",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "drigg@downers.us"
+        },
+        "570": {
+            "deptText": "Public Works",
+            "name": "BILINSKI, MARK",
+            "phone": "(###)###-####",
+            "title": "PW PUBLIC SERVICES SPEC.",
+            "dept": 9,
+            "email": "mbilinski@downers.us"
+        },
+        "1320": {
+            "deptText": "Public Works",
+            "name": "MEYERS, JACOB W",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "jmeyers@downers.us"
+        },
+        "1228": {
+            "deptText": "Public Works",
+            "name": "KMIECIK, DANIEL J",
+            "phone": "(###)###-####",
+            "title": "PW STAFF ENGINEER II",
+            "dept": 9,
+            "email": "dkmiecik@downers.us"
+        },
+        "1084": {
+            "deptText": "Communications",
+            "name": "SCHIRDEWAHN, MARCIA",
+            "phone": "(###)###-####",
+            "title": "MEDIA COMMUNICATIONS SPEC.",
+            "dept": 10,
+            "email": "mschirdewahn@downers.us"
+        },
+        "65": {
+            "deptText": "Public Works",
+            "name": "WAINWRIGHT, GILBERT",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER 2",
+            "dept": 9,
+            "email": "gwainwright@downers.us"
+        },
+        "179": {
+            "deptText": "Manager's Office",
+            "name": "HOLDEN, APRIL K",
+            "phone": "(###)###-####",
+            "title": "AD VILLAGE CLERK",
+            "dept": 7,
+            "email": "aholden@downers.us"
+        },
+        "253": {
+            "deptText": "Public Works",
+            "name": "BRIER, ROBERT W",
+            "phone": "(###)###-####",
+            "title": "PW CAD TECHNICIAN",
+            "dept": 9,
+            "email": "bbrier@downers.us"
+        },
+        "254": {
+            "deptText": "Public Works",
+            "name": "JARZYNKA, BRIAN T",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "bjarzynka@downers.us"
+        },
+        "854": {
+            "deptText": "Public Works",
+            "name": "DJURIC, IAN H",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "idjuric@downers.us"
+        },
+        "973": {
+            "deptText": "Public Works",
+            "name": "MARTIN, SEAN M",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "smartin@downers.us"
+        },
+        "541": {
+            "deptText": "Public Works",
+            "name": "BORKOWSKI, RICHARD J",
+            "phone": "(###)###-####",
+            "title": "PW FLEET MAINT. TECH.",
+            "dept": 9,
+            "email": "rborkowski@downers.us"
+        },
+        "737": {
+            "deptText": "Public Works",
+            "name": "COLAT, GREGOIRE",
+            "phone": "(###)###-####",
+            "title": "PW PUBLIC SERVICES SPEC.",
+            "dept": 9,
+            "email": "gcolat@downers.us"
+        },
+        "738": {
+            "deptText": "Public Works",
+            "name": "VONDERSMITH SR, EDGAR R",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "evondersmith sr@downers.us"
+        },
+        "505": {
+            "deptText": "Public Works",
+            "name": "DRUFKE, DAVID A",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "ddrufke@downers.us"
+        },
+        "634": {
+            "deptText": "Communications",
+            "name": "SCHULTZ, MICHELLE L",
+            "phone": "(###)###-####",
+            "title": "MEDIA  CABLE TV PROD ASST.",
+            "dept": 10,
+            "email": "mschultz@downers.us"
+        },
+        "759": {
+            "deptText": "Community Development",
+            "name": "MATZ, JANET D",
+            "phone": "(###)###-####",
+            "title": "CD PROJECT MANAGER",
+            "dept": 3,
+            "email": "jmatz@downers.us"
+        },
+        "466": {
+            "deptText": "Communications",
+            "name": "WILSON JR, DONALD",
+            "phone": "(###)###-####",
+            "title": "MEDIA  PRODUCTION SUPV.",
+            "dept": 10,
+            "email": "dwilson jr@downers.us"
+        },
+        "169": {
+            "deptText": "Public Works",
+            "name": "REED, CHARLES G",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "creed@downers.us"
+        },
+        "8": {
+            "deptText": "Public Works",
+            "name": "PALKO, KRISTOPHER",
+            "phone": "(630) 434-5482",
+            "title": "PW TECH-PERMIT",
+            "dept": 9,
+            "email": "kpalko@downers.us"
+        },
+        "95": {
+            "deptText": "Manager's Office",
+            "name": "PORTER, ROBERT A",
+            "phone": "(###)###-####",
+            "title": "PD POLICE CHIEF",
+            "dept": 7,
+            "email": "rporter@downers.us"
+        },
+        "162": {
+            "deptText": "Public Works",
+            "name": "VON DER HEIDE, KERSTIN G",
+            "phone": "(630) 434-5475",
+            "title": "PW VILLAGE FORESTER",
+            "dept": 9,
+            "email": "kvonderheide@downers.us"
+        },
+        "964": {
+            "deptText": "Public Works",
+            "name": "RICE, JONATHAN L",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "jrice@downers.us"
+        },
+        "392": {
+            "deptText": "Public Works",
+            "name": "DUGARD, MEGAN K",
+            "phone": "(###)###-####",
+            "title": "PW ADMIN. SECRETARY 2",
+            "dept": 9,
+            "email": "mdugard@downers.us"
+        },
+        "1183": {
+            "deptText": "Manager's Office",
+            "name": "PELLICANO, ALEXANDER R",
+            "phone": "(###)###-####",
+            "title": "CD BUILDING DIVISION MANAGER",
+            "dept": 7,
+            "email": "apellicano@downers.us"
+        },
+        "un": {
+            "deptText": "Unassigned",
+            "name": "Unassigned",
+            "phone": "(630)434-5500",
+            "title": "Unassigned",
+            "dept": 9999,
+            "email": "crc@downers.us"
+        },
+        "1100": {
+            "deptText": "Public Works",
+            "name": "HAWK, NATHANIEL R",
+            "phone": "(###)###-####",
+            "title": "PW STAFF ENGINEER II",
+            "dept": 9,
+            "email": "nhawk@downers.us"
+        },
+        "969": {
+            "deptText": "Manager's Office",
+            "name": "CABRERA, DAISY J",
+            "phone": "(###)###-####",
+            "title": "AD DOCUMENT MGT. SYS. TECH.",
+            "dept": 7,
+            "email": "dcabrera@downers.us"
+        },
+        "1109": {
+            "deptText": "Manager's Office",
+            "name": "TULLY, MARTIN T",
+            "phone": "(###)###-####",
+            "title": "AD MAYOR",
+            "dept": 7,
+            "email": "mtully@downers.us"
+        },
+        "1164": {
+            "deptText": "Public Works",
+            "name": "QUASNEY, SUSAN P",
+            "phone": "(630) 434-5564",
+            "title": "PW STAFF ENGINEER 1",
+            "dept": 9,
+            "email": "squasney@downers.us"
+        },
+        "153": {
+            "deptText": "Public Works",
+            "name": "YOUNG, TIMOTHY D",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER 2",
+            "dept": 9,
+            "email": "tyoung@downers.us"
+        },
+        "152": {
+            "deptText": "Manager's Office",
+            "name": "KOZLOWSKI, DOUGLAS J",
+            "phone": "(630) 434-5550",
+            "title": "MEDIA  DIR. MARKETING & MEDIA",
+            "dept": 7,
+            "email": "dkozlowski@downers.us"
+        },
+        "154": {
+            "deptText": "Public Works",
+            "name": "BARR, SCOTT L",
+            "phone": "(###)###-####",
+            "title": "PW STAFF ENGINEER II",
+            "dept": 9,
+            "email": "sbarr@downers.us"
+        },
+        "555": {
+            "deptText": "Public Works",
+            "name": "YELTON, DAVID G",
+            "phone": "(###)###-####",
+            "title": "PW WATER SUPPLY SPEC.",
+            "dept": 9,
+            "email": "dyelton@downers.us"
+        },
+        "236": {
+            "deptText": "Public Works",
+            "name": "KENNING, KEITH R",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER 2",
+            "dept": 9,
+            "email": "kkenning@downers.us"
+        },
+        "46": {
+            "deptText": "Community Development",
+            "name": "SANDMANN, ROBERT R",
+            "phone": "(630) 434-5590",
+            "title": "CD CODE COMPLIANCE OFFICER",
+            "dept": 3,
+            "email": "rsandmann@downers.us"
+        },
+        "1190": {
+            "deptText": "Public Works",
+            "name": "CALDWELL, BOBBY I",
+            "phone": "(###)###-####",
+            "title": "PW PUBLIC SERVICES SPEC-PT",
+            "dept": 9,
+            "email": "bcaldwell@downers.us"
+        },
+        "355": {
+            "deptText": "Public Works",
+            "name": "KOZAK, RICHARD J",
+            "phone": "(###)###-####",
+            "title": "PW FLEET MAINT. TECH.",
+            "dept": 9,
+            "email": "rkozak@downers.us"
+        },
+        "1297": {
+            "deptText": "Manager's Office",
+            "name": "MILES, MEGAN K",
+            "phone": "(###)###-####",
+            "title": "AD MANAGEMENT ANALYST",
+            "dept": 7,
+            "email": "mmiles@downers.us"
+        },
+        "1277": {
+            "deptText": "Community Development",
+            "name": "AINSWORTH, PATRICK M",
+            "phone": "(###)###-####",
+            "title": "CD PLANNER",
+            "dept": 3,
+            "email": "painsworth@downers.us"
+        },
+        "1287": {
+            "deptText": "Public Works",
+            "name": "PASQUINELLI, VINCENT J",
+            "phone": "(###)###-####",
+            "title": "PW MANAGER, FLEET SERVICES",
+            "dept": 9,
+            "email": "vpasquinelli@downers.us"
+        },
+        "809": {
+            "deptText": "Manager's Office",
+            "name": "POPOVICH, STANLEY J",
+            "phone": "(###)###-####",
+            "title": "CD PLANNIING MANAGER",
+            "dept": 7,
+            "email": "spopovich@downers.us"
+        },
+        "354": {
+            "deptText": "Public Works",
+            "name": "RICHTER, KENNETH J",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER 2",
+            "dept": 9,
+            "email": "krichter@downers.us"
+        },
+        "682": {
+            "deptText": "Public Works",
+            "name": "SAKA, STEPHEN H",
+            "phone": "(###)###-####",
+            "title": "PW MAINTENANCE WORKER I",
+            "dept": 9,
+            "email": "ssaka@downers.us"
+        },
+        "358": {
+            "deptText": "Public Works",
+            "name": "MCCLAIN, WILLIAM J",
+            "phone": "(630) 434-6895",
+            "title": "PW TECHNICIAN-ENGINEERING",
+            "dept": 9,
+            "email": "bmcclain@downers.us"
+        }
+    },
+    "departments": ["Building Services", "Business Technology", "Community Development", "Finance", "Fire", "Legal", "Manager's Office", "Police", "Public Works", "Communications"],
+    "actionCodes": ["Attachment", "Contact Added", "Assignment Changed", "Google Drive Letter Created", "Status Changed", "Contact Edited", "In-person Conversation", "Inspection", "Phone Call", "Link Added", "Email Sent"],
+    "dashboardViews": {
+        "Performance": "Performance",
+        "Snapshot": "Snapshot"
+    },
+    "question_text": {
+        "0": {
+            "QuestionType": "List",
+            "QuestionOrder": 0,
+            "QuestionAnswerList": ["Private Property", "Right of Way"],
+            "QuestionText": "Is this request on private property or in a public right of way (i.e. a roadway or the area including a public sidewalk to the roadway)?",
+            "QuestionID": 0
+        },
+        "1": {
+            "QuestionType": "List",
+            "QuestionOrder": 0,
+            "QuestionAnswerList": ["Bulb - Out All the Time", "Bulb - Out Intermittently", "Blub - On All the Time", "Damage to the Pole"],
+            "QuestionText": "What type of outage is this request concerning?",
+            "QuestionID": 1
+        }
+    },
+    "dashboardSubtypes": {
+        "Dept": "Department",
+        "All": "All",
+        "Type": "Type"
+    },
+    "questions": {
+        "2": [{
+            "QuestionType": "List",
+            "QuestionOrder": 0,
+            "QuestionAnswerList": ["Bulb - Out All the Time", "Bulb - Out Intermittently", "Blub - On All the Time", "Damage to the Pole"],
+            "QuestionText": "What type of outage is this request concerning?",
+            "QuestionID": 1
+        }],
+        "89": [{
+            "QuestionType": "List",
+            "QuestionOrder": 0,
+            "QuestionAnswerList": ["Private Property", "Right of Way"],
+            "QuestionText": "Is this request on private property or in a public right of way (i.e. a roadway or the area including a public sidewalk to the roadway)?",
+            "QuestionID": 0
+        }]
+    },
+    "types": {
+        "ADA Complaint": {
+            "category": "Parking/Vehicle",
+            "geoLayer": null,
+            "description": "Handicap-parking and accessibility related items.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["handicap parking"],
+            "RequestID": 32,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Address": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to address",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["address"],
+            "RequestID": 66,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Attention Getting Devices": {
+            "category": "Private Signs",
+            "geoLayer": null,
+            "description": "Usually related to inflatable or wind blown signage advertising sales for commercial businesses.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["air walkers", "inflatable"],
+            "RequestID": 40,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Banners/Temporary Signs": {
+            "category": "Private Signs",
+            "geoLayer": null,
+            "description": "Signs related to promotional events displayed without a permit.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["temp sign", "sale sign", "banner"],
+            "RequestID": 38,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Barking Dogs": {
+            "category": "Animal/Wildlife",
+            "geoLayer": null,
+            "description": "Dogs (or other animals) that barking or noises result in a nuisance.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["barking", "barks", "bark", "loud dog"],
+            "RequestID": 24,
+            "DefaultAssigned": null,
+            "MapColor": "#5E5C02",
+            "geoRouteType": "Staff"
+        },
+        "Blocked Access (Driveway/Sidewalk)": {
+            "category": "Snow",
+            "geoLayer": null,
+            "description": "Blocked access to a driveway or sidewalk as the result of a snow plow.",
+            "RespondingEmployees": ["520", "371", "162", "131", "176"],
+            "geoField": null,
+            "keywords": ["blocked sidewalk", "blocked driveway", "driveway blocked", "sidewalk blocked"],
+            "RequestID": 3,
+            "DefaultAssigned": null,
+            "MapColor": "#B1EFFF",
+            "geoRouteType": "Juris"
+        },
+        "Blocked Exits/Entrance": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to blocked exits/entrance",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["blocked exit", "blocked entrance"],
+            "RequestID": 69,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Branches/Tree Limbs in Street": {
+            "category": "Trees",
+            "geoLayer": null,
+            "description": "Branches and tree limbs in the roadway that need to be removed.",
+            "RespondingEmployees": ["162", "447", "371"],
+            "geoField": null,
+            "keywords": ["branch in street", "branch feel in the street", "branch obstructing street"],
+            "RequestID": 14,
+            "DefaultAssigned": null,
+            "MapColor": "#249957",
+            "geoRouteType": "Juris"
+        },
+        "Broken Tree Limbs": {
+            "category": "Grass/Weeds/Leaves",
+            "geoLayer": null,
+            "description": "Items relating to broken tree limbs",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["broken tree limbs"],
+            "RequestID": 83,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Building Security": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to building security",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["building security"],
+            "RequestID": 54,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Code": {
+            "category": "Code",
+            "geoLayer": null,
+            "description": "Code related items.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": [],
+            "RequestID": 88,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Construction Noise": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Items relating to construction noise",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["construction noise"],
+            "RequestID": 46,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Construction Parking": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Items relating to construction parking",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["construction parking"],
+            "RequestID": 52,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Contractor Equipment": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Items relating to contractor equipment",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["contractor equipment"],
+            "RequestID": 47,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Damage to Windows/Doors": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to damage to windows/doors",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["damage to window", "damage to door"],
+            "RequestID": 71,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Dead Animal": {
+            "category": "Animal/Wildlife",
+            "geoLayer": null,
+            "description": "Roadkill or other dead animals found in the right of way.",
+            "RespondingEmployees": ["371"],
+            "geoField": null,
+            "keywords": ["roadkill", "animal in the street", "dead animal", "dead"],
+            "RequestID": 16,
+            "DefaultAssigned": null,
+            "MapColor": "#5E5C02",
+            "geoRouteType": "Juris"
+        },
+        "Deck/Balcony/Porch": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to deck/balcony/porch",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["deck", "balcony", "porch"],
+            "RequestID": 60,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Drainage": {
+            "category": "Drainage",
+            "geoLayer": null,
+            "description": "Drainage related items.",
+            "RespondingEmployees": ["1260", "1145", "131", "1100", "1228", "1265", "842", "823", "1164"],
+            "geoField": null,
+            "keywords": [],
+            "RequestID": 89,
+            "DefaultAssigned": 1145,
+            "MapColor": "#1178AB",
+            "geoRouteType": null
+        },
+        "Drainage - Cost Share": {
+            "category": "Drainage",
+            "geoLayer": null,
+            "description": "Drianage issues pertaining to private property that result in the property owner(s) entering a cost share agreement with the Village",
+            "RespondingEmployees": ["1260", "1145", "131", "1100", "1228", "1265", "842", "823", "1164"],
+            "geoField": null,
+            "keywords": ["drainage", "storm", "stormwater", "storm water", "falood", "flooding", "floods", "sump", "pump", "water in"],
+            "RequestID": 85,
+            "DefaultAssigned": 1145,
+            "MapColor": "#1178AB",
+            "geoRouteType": null
+        },
+        "Drainage - General": {
+            "category": "Drainage",
+            "geoLayer": null,
+            "description": "Drainage issues mainly pertaining to the public rights of way. The Village will look at Private Property only to determine issue is not the result of Village infrastructure and for advice.",
+            "RespondingEmployees": ["1260", "1145", "131", "1100", "1228", "1265", "842", "823", "1164"],
+            "geoField": null,
+            "keywords": ["drainage", "storm", "stormwater", "storm water", "falood", "flooding", "floods", "sump", "pump", "water in"],
+            "RequestID": 1,
+            "DefaultAssigned": 1145,
+            "MapColor": "#1178AB",
+            "geoRouteType": null
+        },
+        "Drainage - Sidewalks": {
+            "category": "Drainage",
+            "geoLayer": null,
+            "description": "Drainage issues caused a defect or interference from a sidewalk",
+            "RespondingEmployees": ["1260", "1145", "131", "1100", "1228", "1265", "842", "823", "1164"],
+            "geoField": null,
+            "keywords": ["drainage", "storm", "stormwater", "storm water", "falood", "flooding", "floods", "sump", "pump", "water in"],
+            "RequestID": 86,
+            "DefaultAssigned": 1145,
+            "MapColor": "#1178AB",
+            "geoRouteType": null
+        },
+        "Drainage - Streets": {
+            "category": "Drainage",
+            "geoLayer": null,
+            "description": "Drainage issues in the public right of way",
+            "RespondingEmployees": ["1260", "1145", "131", "1100", "1228", "1265", "842", "823", "1164"],
+            "geoField": null,
+            "keywords": ["drainage", "storm", "stormwater", "storm water", "falood", "flooding", "floods", "sump", "pump", "water in"],
+            "RequestID": 87,
+            "DefaultAssigned": 1145,
+            "MapColor": "#1178AB",
+            "geoRouteType": null
+        },
+        "Driveway/Sidewalk": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to driveway/sidewalk",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["driveway", "sidewalk"],
+            "RequestID": 56,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Dumpster": {
+            "category": "Rubbish/Garbage",
+            "geoLayer": null,
+            "description": "Items relating to dumpster",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["dumpster"],
+            "RequestID": 79,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Dust": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Items relating to dust",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["dust"],
+            "RequestID": 42,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Electrical/Mechanical": {
+            "category": "Tenant",
+            "geoLayer": null,
+            "description": "Items relating to electrical/mechanical",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["electrical", "mechanical"],
+            "RequestID": 77,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Excessive Animals": {
+            "category": "Animal/Wildlife",
+            "geoLayer": null,
+            "description": "Items involving pets or animals owned or contained on private property that results in a nuisance.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["too many pets", "too many dogs", "too many cats", "a lot of pets", "a lot of dogs", "a lot of cats", "has dogs", "has cats", "has pets", "has animals", "poops on my lawn", "poops on my yard", "craps on my lawn", "craps on my yard", "poops on my grass", "craps on my grass"],
+            "RequestID": 23,
+            "DefaultAssigned": null,
+            "MapColor": "#5E5C02",
+            "geoRouteType": "Staff"
+        },
+        "Existing Elevator": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to existing elevator",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["existing elevator"],
+            "RequestID": 68,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Exterior Surfaces": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to exterior surfaces",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["exterior surfaces"],
+            "RequestID": 65,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Fence": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to fence",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["fence"],
+            "RequestID": 61,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "General": {
+            "category": "General",
+            "geoLayer": null,
+            "description": "Anything that does not fit into another categories.",
+            "RespondingEmployees": "None",
+            "geoField": null,
+            "keywords": [],
+            "RequestID": 0,
+            "DefaultAssigned": null,
+            "MapColor": "#003f5f",
+            "geoRouteType": null
+        },
+        "General ": {
+            "category": "General",
+            "geoLayer": null,
+            "description": "Anything that does not fit into another categories.",
+            "RespondingEmployees": "None",
+            "geoField": null,
+            "keywords": [],
+            "RequestID": 90,
+            "DefaultAssigned": null,
+            "MapColor": "#003f5f",
+            "geoRouteType": null
+        },
+        "Graffiti": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to graffiti",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["graffiti"],
+            "RequestID": 62,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Heat/Ventilation": {
+            "category": "Tenant",
+            "geoLayer": null,
+            "description": "Items relating to heat/ventilation",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["heat", "ventilation"],
+            "RequestID": 75,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Hoarding/Clutter": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to hoarding/clutter",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["hoarding", "clutter"],
+            "RequestID": 73,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Home Occupation": {
+            "category": "Parking/Vehicle",
+            "geoLayer": null,
+            "description": "Per <Insert Code Name>, there is a limit on the number of people that can live in one residence based on the amount of livable square footage.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["too many vehicles", "a lot of vehicles", "has vehicles", "too many cars", "lot of cars", "has cars"],
+            "RequestID": 30,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Inoperable Vehicles": {
+            "category": "Parking/Vehicle",
+            "geoLayer": null,
+            "description": "Vehicles that haven't moved in a significant time or have visible defects (missing or tires, etc.)",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["abandoned vehicle", "vehicle hasn't moved"],
+            "RequestID": 33,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Leaves": {
+            "category": "Grass/Weeds/Leaves",
+            "geoLayer": null,
+            "description": "Items relating to leaves",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["leaves"],
+            "RequestID": 84,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Lighting Too Bright": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to lighting too bright",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["lighting too bright"],
+            "RequestID": 74,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Mailbox Knockdowns": {
+            "category": "Snow",
+            "geoLayer": null,
+            "description": "Mailbox knocked down from snow plow activity.",
+            "RespondingEmployees": ["520", "371", "162", "131", "176"],
+            "geoField": null,
+            "keywords": ["mailbox", "knock down"],
+            "RequestID": 4,
+            "DefaultAssigned": null,
+            "MapColor": "#B1EFFF",
+            "geoRouteType": "Juris"
+        },
+        "Mold/Peeling/Water Damage": {
+            "category": "Tenant",
+            "geoLayer": null,
+            "description": "Items relating to mold/peeling/water damage",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["mold", "peeling", "water damage"],
+            "RequestID": 78,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Mud": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Items relating to mud",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["mud"],
+            "RequestID": 51,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Noise": {
+            "category": "General",
+            "geoLayer": null,
+            "description": "Loud music or other noise coming from a property.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["excessive noise", "loud", "noisy", "volume"],
+            "RequestID": 25,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Obstructing Public Walk": {
+            "category": "Grass/Weeds/Leaves",
+            "geoLayer": null,
+            "description": "Items relating to obstructing public walk",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["obstructing public walk"],
+            "RequestID": 82,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Open Burning": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Items relating to open burning",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["open burning"],
+            "RequestID": 48,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Overweight Permit (VODG Streets Only)": {
+            "category": "Streets",
+            "geoLayer": null,
+            "description": "Permits for trucks over a <insert> wieght limit.",
+            "RespondingEmployees": "None",
+            "geoField": null,
+            "keywords": ["overweight", " truck", "overweight truck permit"],
+            "RequestID": 6,
+            "DefaultAssigned": null,
+            "MapColor": "#CC8979",
+            "geoRouteType": "Juris"
+        },
+        "Parking in Front Yard, Back Yard, or Grass": {
+            "category": "Parking/Vehicle",
+            "geoLayer": null,
+            "description": "Vehicles parked on inappropriate surfaces.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["parking on grass", "not on driveway"],
+            "RequestID": 34,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Parkway Tree Damage": {
+            "category": "Trees",
+            "geoLayer": null,
+            "description": "Parkway tree damage.",
+            "RespondingEmployees": ["162", "447"],
+            "geoField": null,
+            "keywords": ["damage to tree", "limb broke off", "big branch fell"],
+            "RequestID": 9,
+            "DefaultAssigned": null,
+            "MapColor": "#249957",
+            "geoRouteType": "<Null>"
+        },
+        "Parkway Tree Inspection": {
+            "category": "Trees",
+            "geoLayer": null,
+            "description": "Parkway tree inspection.",
+            "RespondingEmployees": ["162", "447"],
+            "geoField": null,
+            "keywords": ["inspection the tree", "tree appears to be dead", "tree is dying"],
+            "RequestID": 10,
+            "DefaultAssigned": null,
+            "MapColor": "#249957",
+            "geoRouteType": "<Null>"
+        },
+        "Planting Request": {
+            "category": "Trees",
+            "geoLayer": null,
+            "description": "New tree planting request.",
+            "RespondingEmployees": ["162", "447"],
+            "geoField": null,
+            "keywords": ["new tree", "plant a tree"],
+            "RequestID": 11,
+            "DefaultAssigned": null,
+            "MapColor": "#249957",
+            "geoRouteType": "<Null>"
+        },
+        "Plowing Needed": {
+            "category": "Snow",
+            "geoLayer": null,
+            "description": "For any complaints of lack of or the quality of snow plowing.",
+            "RespondingEmployees": ["520", "371", "162", "131", "176"],
+            "geoField": null,
+            "keywords": ["street not clear", "no plow", "seen a plow"],
+            "RequestID": 5,
+            "DefaultAssigned": null,
+            "MapColor": "#B1EFFF",
+            "geoRouteType": "Juris"
+        },
+        "Plumbing/Hot Water": {
+            "category": "Tenant",
+            "geoLayer": null,
+            "description": "Items relating to plumbing/hot water",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["plumbing", "hot water"],
+            "RequestID": 76,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Political Signs": {
+            "category": "Private Signs",
+            "geoLayer": null,
+            "description": "Inappropriate displaying of political signage.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["political sign", "senator", "representative"],
+            "RequestID": 37,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Pool": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to pool",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["pool"],
+            "RequestID": 58,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Potholes": {
+            "category": "Streets",
+            "geoLayer": null,
+            "description": "Potholes or other street defects.",
+            "RespondingEmployees": ["131", "176"],
+            "geoField": null,
+            "keywords": ["pothole", "street needs repair", " potholes"],
+            "RequestID": 8,
+            "DefaultAssigned": null,
+            "MapColor": "#CC8979",
+            "geoRouteType": "<Null>"
+        },
+        "Pruning Request": {
+            "category": "Trees",
+            "geoLayer": null,
+            "description": "Request for tree triming.",
+            "RespondingEmployees": ["162", "447"],
+            "geoField": null,
+            "keywords": ["pruning", " prun", "low hanging branch"],
+            "RequestID": 13,
+            "DefaultAssigned": null,
+            "MapColor": "#249957",
+            "geoRouteType": null
+        },
+        "Public Signs": {
+            "category": "Public Signs",
+            "geoLayer": null,
+            "description": "Street, Traffic, and Village related signage.",
+            "RespondingEmployees": ["176"],
+            "geoField": null,
+            "keywords": [],
+            "RequestID": 91,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": null
+        },
+        "RVs/Campers,Trailers": {
+            "category": "Parking/Vehicle",
+            "geoLayer": null,
+            "description": "Inappropriate storage and other items related to RVs, Campers, and Trailers",
+            "RespondingEmployees": ["46.1078"],
+            "geoField": null,
+            "keywords": ["rv", "rvs", "campers", "trailers"],
+            "RequestID": 35,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Removal Request": {
+            "category": "Trees",
+            "geoLayer": null,
+            "description": "Removal of tree request due to age, quality or other reasons.",
+            "RespondingEmployees": ["162", "447"],
+            "geoField": null,
+            "keywords": ["remove the tree", "tree removed", "remove this tree", "remove tree"],
+            "RequestID": 12,
+            "DefaultAssigned": null,
+            "MapColor": "#249957",
+            "geoRouteType": null
+        },
+        "Retaining Wall": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to retaining wall",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["retaining wall"],
+            "RequestID": 64,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Roof": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to roof",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["roof"],
+            "RequestID": 67,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Semis/Oversized Vehicles": {
+            "category": "Parking/Vehicle",
+            "geoLayer": null,
+            "description": "Inappropriate use of Semis and Oversized Vehicles in residential areas.",
+            "RespondingEmployees": ["46.1078"],
+            "geoField": null,
+            "keywords": ["semis", "trucks", "oversized", "truck"],
+            "RequestID": 36,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Shed/Garage Setback": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Items relating to shed/garage in disrepair/setbacks",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["shed setback", " garage setback"],
+            "RequestID": 43,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Shed/Garage in Disrepair": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to shed/garage in disrepair",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["shed in disrepair", "garage in disrepair"],
+            "RequestID": 53,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Silt Fencing": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Items relating to silt fencing",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["silt fencing"],
+            "RequestID": 49,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Smoke/CO Detector/Fire Alarm": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to smoke/co detector/fire alarm",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["smoke", "co", "co detector", "fire alarm"],
+            "RequestID": 70,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Stairs/Handrails/Guards": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to stairs/handrails/guards",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["stairs", "handrails", "guards"],
+            "RequestID": 57,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Storage Container": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to storage container",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["storage container"],
+            "RequestID": 59,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Street Closure Request - Permit": {
+            "category": "Streets",
+            "geoLayer": null,
+            "description": "ROW Permits for work related to residential or utility construction.",
+            "RespondingEmployees": ["8", "127", "358"],
+            "geoField": null,
+            "keywords": ["ROW", "permit", "utility road closure", "permit to close road"],
+            "RequestID": 7,
+            "DefaultAssigned": null,
+            "MapColor": "#CC8979",
+            "geoRouteType": "Juris|Staff"
+        },
+        "Street Closure Request - Special Event": {
+            "category": "Streets",
+            "geoLayer": null,
+            "description": "Special event street closures for items like runs, walks, and other festivals in the Village.",
+            "RespondingEmployees": ["176", "371"],
+            "geoField": null,
+            "keywords": ["special event", "road closure"],
+            "RequestID": 21,
+            "DefaultAssigned": null,
+            "MapColor": "#CC8979",
+            "geoRouteType": null
+        },
+        "Street Closure Request - Village Construction": {
+            "category": "Streets",
+            "geoLayer": null,
+            "description": "Street closure request for items related to Village Construction (CIP) Projects.",
+            "RespondingEmployees": "None",
+            "geoField": null,
+            "keywords": ["village construction", "cip", "cip project"],
+            "RequestID": 22,
+            "DefaultAssigned": null,
+            "MapColor": "#CC8979",
+            "geoRouteType": "Staff"
+        },
+        "Street Light": {
+            "category": "General",
+            "geoLayer": null,
+            "description": "Street light outages or damage to the poles.",
+            "RespondingEmployees": ["371"],
+            "geoField": null,
+            "keywords": ["street light", "light", "light pole"],
+            "RequestID": 2,
+            "DefaultAssigned": null,
+            "MapColor": "#ABA609",
+            "geoRouteType": "Juris"
+        },
+        "Tall Grass": {
+            "category": "Grass/Weeds/Leaves",
+            "geoLayer": null,
+            "description": "Items relating to tall grass",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["tall grass"],
+            "RequestID": 81,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Traffic/Parking Signs - Damage": {
+            "category": "Public Signs",
+            "geoLayer": null,
+            "description": "Traffic and Parking signs that have damage or have been defaced.",
+            "RespondingEmployees": ["176"],
+            "geoField": null,
+            "keywords": ["sign damaged", "pole damaged"],
+            "RequestID": 19,
+            "DefaultAssigned": null,
+            "MapColor": "#FFB500",
+            "geoRouteType": null
+        },
+        "Traffic/Parking Signs - Missing": {
+            "category": "Public Signs",
+            "geoLayer": null,
+            "description": "Missing Traffic and Parking signs.",
+            "RespondingEmployees": ["176"],
+            "geoField": null,
+            "keywords": ["traffic sign", "parking sign", "sign missing", "sign gone"],
+            "RequestID": 18,
+            "DefaultAssigned": null,
+            "MapColor": "#FFB500",
+            "geoRouteType": null
+        },
+        "Traffic/Parking Signs - Obstructed": {
+            "category": "Public Signs",
+            "geoLayer": null,
+            "description": "Traffic and Parking signs that obstructed by trees or other items.",
+            "RespondingEmployees": ["176"],
+            "geoField": null,
+            "keywords": ["see sign", "read wording", "wording faded"],
+            "RequestID": 20,
+            "DefaultAssigned": null,
+            "MapColor": "#FFB500",
+            "geoRouteType": null
+        },
+        "Trains": {
+            "category": "Parking/Vehicle",
+            "geoLayer": null,
+            "description": "Train-related parking complaints.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["parking for the train", "train parking"],
+            "RequestID": 31,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Tree on Private Property": {
+            "category": "Trees",
+            "geoLayer": null,
+            "description": "TutorialApp pertaining to trees on private property.",
+            "RespondingEmployees": ["162", "447"],
+            "geoField": null,
+            "keywords": ["tree in yard", "tree in my yard", "tree on my property"],
+            "RequestID": 15,
+            "DefaultAssigned": null,
+            "MapColor": "#249957",
+            "geoRouteType": null
+        },
+        "Trees": {
+            "category": "Trees",
+            "geoLayer": null,
+            "description": "All tree related items not weather related.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": [],
+            "RequestID": 93,
+            "DefaultAssigned": null,
+            "MapColor": "#249957",
+            "geoRouteType": null
+        },
+        "Unsanitary Condition": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to unsanitary condition",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["unsanitary condition"],
+            "RequestID": 72,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Utilities (ComEd, Comcast, Nicor, AT&T)": {
+            "category": "General",
+            "geoLayer": null,
+            "description": "General complaints about the quality of service for these utilities.",
+            "RespondingEmployees": ["152", "1089"],
+            "geoField": null,
+            "keywords": ["Comcast", "ComEd", "AT&T", "Nicor"],
+            "RequestID": 17,
+            "DefaultAssigned": 1089,
+            "MapColor": "#5E5A65",
+            "geoRouteType": null
+        },
+        "Vacant Building Not Secured": {
+            "category": "Existing Disrepair",
+            "geoLayer": null,
+            "description": "Items relating to vacant building not secured",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["vacant building not secured"],
+            "RequestID": 55,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Weather Related": {
+            "category": "Weather Related",
+            "geoLayer": null,
+            "description": "Any weather-related TutorialApp.",
+            "RespondingEmployees": ["520", "371", "162", "131", "176"],
+            "geoField": null,
+            "keywords": [],
+            "RequestID": 92,
+            "DefaultAssigned": null,
+            "MapColor": "#B1EFFF",
+            "geoRouteType": "Juris"
+        },
+        "Window Signs": {
+            "category": "Private Signs",
+            "geoLayer": null,
+            "description": "Signs for commercial and residentail areas displayed illegally in windows.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["window sign", "sign in window"],
+            "RequestID": 39,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Work Too Early/Too Late": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Items relating to work too early/too late",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["too early", "too late"],
+            "RequestID": 50,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Work without Permit - Deck/Porch": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Permit must display in front window of a home. Work performed without a permit can result in a code violation and fine.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["deck without a permit", "porch without a permit"],
+            "RequestID": 27,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Work without Permit - Fence": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Permit must display in front window of a home. Work performed without a permit can result in a code violation and fine.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["fence without a permit"],
+            "RequestID": 26,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Work without Permit - Remodel": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Permit must display in front window of a home. Work performed without a permit can result in a code violation and fine.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["remodel without permit", " rennovating without a permit", "no permit"],
+            "RequestID": 28,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        },
+        "Work without Permit - Retaining Wall": {
+            "category": "Construction/Demo",
+            "geoLayer": null,
+            "description": "Permit must display in front window of a home. Work performed without a permit can result in a code violation and fine.",
+            "RespondingEmployees": ["46", "1078"],
+            "geoField": null,
+            "keywords": ["retaining wall without a permit"],
+            "RequestID": 29,
+            "DefaultAssigned": null,
+            "MapColor": "#B1D2BE",
+            "geoRouteType": "Staff"
+        }
+    }
+}
