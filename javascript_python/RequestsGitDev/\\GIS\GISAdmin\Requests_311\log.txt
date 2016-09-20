@@ -1,0 +1,116 @@
+
+-----     2015-02-19 22:50:19     -----
+Base Data Updated
+CRM Daily Notification Error
+list index out of range<type 'exceptions.IndexError'>220
+------------------------------
+
+-----     2015-02-19 22:52:52     -----
+Base Data Updated
+CRM Daily Notification Error
+got more than 8192 bytes<class 'ftplib.Error'>224
+------------------------------
+
+-----     2015-02-20 21:08:20     -----
+Base Data Updated
+------------------------------
+
+-----     2015-04-01 13:37:00     -----
+Daily Notifications
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-105001
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-112251
+Reminder Sent to bsandmann@downers.us for Request ID: 20150318-094417
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-152345
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-154649
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-160628
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-113730
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-114717
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-115826
+Reminder Sent to bsandmann@downers.us for Request ID: 20150318-170735
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-114830
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-091343
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-094907
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-102745
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-112555
+Reminder Sent to bsandmann@downers.us for Request ID: 20150331-145617
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-120836
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-133558
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-135027
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-140302
+Reminder Sent to bsandmann@downers.us for Request ID: 20150330-140739
+------------------------------
+
+-----     2015-04-01 13:41:49     -----
+Daily Notifications
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-105001
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-112251
+Reminder Sent to bsandmann@downers.us for Request ID: 20150318-094417
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-152345
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-154649
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-160628
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-113730
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-114717
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-115826
+Reminder Sent to bsandmann@downers.us for Request ID: 20150318-170735
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-114830
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-091343
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-094907
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-102745
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-112555
+Reminder Sent to bsandmann@downers.us for Request ID: 20150331-145617
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-120836
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-133558
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-135027
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-140302
+Reminder Sent to bsandmann@downers.us for Request ID: 20150330-140739
+------------------------------
+
+-----     2015-04-01 13:45:18     -----
+Daily Notifications
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-105001
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-112251
+Reminder Sent to bsandmann@downers.us for Request ID: 20150318-094417
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-152345
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-154649
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-160628
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-113730
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-114717
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-115826
+Reminder Sent to bsandmann@downers.us for Request ID: 20150318-170735
+Reminder Sent to bsandmann@downers.us for Request ID: 20150319-114830
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-091343
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-094907
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-102745
+Reminder Sent to bsandmann@downers.us for Request ID: 20150320-112555
+Reminder Sent to bsandmann@downers.us for Request ID: 20150331-145617
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-120836
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-133558
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-135027
+Reminder Sent to bsandmann@downers.us for Request ID: 20150324-140302
+Reminder Sent to bsandmann@downers.us for Request ID: 20150330-140739
+------------------------------
+
+-----     2015-04-01 13:48:25     -----
+Daily Notifications
+Reminder Sent to jkopinski@downers.us for Request ID: 20150324-105001
+Reminder Sent to jkopinski@downers.us for Request ID: 20150324-112251
+Reminder Sent to jkopinski@downers.us for Request ID: 20150318-094417
+Reminder Sent to jkopinski@downers.us for Request ID: 20150319-152345
+Reminder Sent to jkopinski@downers.us for Request ID: 20150319-154649
+Reminder Sent to jkopinski@downers.us for Request ID: 20150319-160628
+Reminder Sent to jkopinski@downers.us for Request ID: 20150320-113730
+Reminder Sent to jkopinski@downers.us for Request ID: 20150320-114717
+Reminder Sent to jkopinski@downers.us for Request ID: 20150320-115826
+Reminder Sent to jkopinski@downers.us for Request ID: 20150318-170735
+Reminder Sent to jkopinski@downers.us for Request ID: 20150319-114830
+Reminder Sent to jkopinski@downers.us for Request ID: 20150320-091343
+Reminder Sent to jkopinski@downers.us for Request ID: 20150320-094907
+Reminder Sent to jkopinski@downers.us for Request ID: 20150320-102745
+Reminder Sent to jkopinski@downers.us for Request ID: 20150320-112555
+Reminder Sent to jkopinski@downers.us for Request ID: 20150331-145617
+Reminder Sent to jkopinski@downers.us for Request ID: 20150324-120836
+Reminder Sent to jkopinski@downers.us for Request ID: 20150324-133558
+Reminder Sent to jkopinski@downers.us for Request ID: 20150324-135027
+Reminder Sent to jkopinski@downers.us for Request ID: 20150324-140302
+Reminder Sent to jkopinski@downers.us for Request ID: 20150330-140739
+------------------------------

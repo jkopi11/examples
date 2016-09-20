@@ -1,0 +1,14 @@
+{
+  "name": "fantasy",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "mongoose": "4.2.7",
+    "csvtojson": "0.4.5",
+    "mongodb": "2.0.49",
+    "google-spreadsheet": "1.0.1"
+  }
+}

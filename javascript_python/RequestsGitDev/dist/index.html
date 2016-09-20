@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="520694065517-lnf60q6mccmi0mqrb89qoruiadn6mlh5.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <link rel="icon" href="../common/images/DGVillageLogo.png">
+        <link href="http://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet" type="text/css">
+        <!--<link rel="stylesheet" href="http://www.downers.us/public/themes/2014Q3/css/styles.css" media="screen" type="text/css">-->
+        <!--<link rel="stylesheet" href="//js.arcgis.com/3.10/js/esri/css/esri.css">-->
+        <link rel="stylesheet" href="../Libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!--<link rel="stylesheet" href="//esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">-->
+        <link rel="stylesheet" href="./support_files/requests.css">
+        <title>Downers Grove CRC</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://gis.vodg.us/requests"><img alt="Brand" height="40" width="40" src="../common/images/DGVillageLogo.png">Downers Grove CRC</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="new-tab" class="active dg-tab"><a>New</a></li>
+                        <li id="list-tab" class="dg-tab"><a>List</a></li>
+                        <li id="map-tab" class="dg-tab"><a>Map</a></li>
+                        <li id="dashboard-tab" class="dg-tab"><a>Dashboard</a></li>
+                        <li id="manage-tab" class="dg-tab blue"><a id="manage-tab-button">Detail</a></li>
+                        <li id="help-tab" class="dg-tab"><a href="https://docs.google.com/document/d/1pHB1kSJphv9dKqcOyh28_vktlPnHHt2jDtQaHeBOE00" target="_blank">Help</a></li>
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="request-dl-status"><a id="request-dl-state" disabled></a></li>
+                        <li id="settings"><a id="userphoto" class="navbar-link" href="javascript:showSettings()"><span>Login</span></a></li>
+                    </ul>
+                </div><!-- /.sidebar-nav navbar-collapse -->
+            </div>
+        </nav>    
+        <div class="tab-content">
+            <div class="container event-container hide">
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="lead event-vertical">Event - Things To Know</p>
+                </div>
+                <div class="col-md-10 event-context">
+                  <div id="eventItemContext">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- NEW PANE -->
+            <div class="tab-pane" id="new-pane">
+                <div class="container">
+                    <div class="row">
+                        <div class="page-header">
+                            <h1 class="h3">New Request</h1>
+                        </div>
+                        <div class="col-md-7">
+                            <div id="new-request">
+                                <form id="enterForm" class="form-horizontal" role="form" action="javascript:createRequest()" autocomplete="off">
+                                    <fieldset id="requestFieldset">
+                                        <legend>Request</legend>
+                                        <div class="form-group">
+                                            <label for="rAddress" class="col-md-4">Location</label>
+                                            <div class="col-md-8">
+                                                <input id="rAddress" type="text" class="form-control locationLookup">
+                                                <small class="col-md-12 detailSection"><strong>Please pick from the list that appears as you type.</strong><br>Examples of locations: Addresses - "801 BURLINGTON AVE", Intersections - "Intersection of MAPLE AVE & MAIN ST", Blocks - "4300 block of MAIN ST"</small>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label for="rDesc" class="col-md-4">Description</label>
+                                            <div class="col-md-8"><textarea id="rDesc" name="fDesc" onkeyup="javascript:keywordsFind(this)" rows="5" class="form-control" maxlength="509"></textarea>
+                                            </div>
+                                        </div>
+                                        <!--<div class="form-group hidden">
+                                            <label for="requestTypes" class="col-md-4"><span class="popover-underline">Request Type</span></label>
+                                            <div class="col-md-8">
+                                                <select id="requestTypes" class="form-control"></select>
+                                            </div>
+                                        </div>-->
+                                        <div class="form-group">
+                                            <label for="requestTypes" class="col-md-4"><span class="popover-underline">Request Type</span></label>
+                                            <div id="RequestTypeContainer" class="col-md-8">
+                                                
+                                                <input type="text" id="requestTypes" class="form-control hidden"/>
+                                                <button id="RequestTypeButton" data-toggle="dropdown" data-target="RequestTypeList" class="form-control btn btn-default dropdown-list" type="button">General</button>
+    		                                    <ul id="RequestTypeList" class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                                    <li class="dropdown-submenu" id="RTL-SuggestionTitle">
+                                                        <a tabindex="-1" href="#">Suggestions (0)</a>
+                                                        <ul class="dropdown-menu" id="RTL-Suggestions">
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-4">
+                                                <label for="filter-assignEmp">Assigned Employee</label>
+                                            </div>
+                                            <div class="col-md-8" id="assignContainer">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="receivedDate" class="col-md-4">Date Received</label>
+                                            <div class="col-md-8">
+                                                <input type="text" id="receivedDate" class="datepicker form-control input-md">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <legend>Contact</legend>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="btn-group pull-right">
+                                                      <button type="button" class="btn btn-warning contact-search"><span class='glyphicon glyphicon-search' aria-hidden='true'>&nbsp</span><span id="contactSearchType">Name</span></button>
+                                                      <button type="button" class="btn btn-warning dropdown-toggle contact-search" data-toggle="dropdown" aria-expanded="false">
+                                                        <span class="caret"></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="javascript:lookupContactToggle('name')">Name</a></li>
+                                                        <li><a href="javascript:lookupContactToggle('phone')">Phone</a></li>
+                                                          <li><a href="javascript:lookupContactToggle('address')">Address</a></li>
+                                                        <li><a href="javascript:lookupContactToggle('off')">Turn Off</a></li>
+                                                      </ul>
+                                                    </div>
+                                                <!--<button class='btn btn-warning location-search pull-right' type='button'>
+                                                    <span class='glyphicon glyphicon-search' aria-hidden='true'></span>
+                                                </button>-->
+                                            </div>
+                                        </div>
+                                        <div class="form-group hidden">
+                                            <label for="ContactID" class="col-md-4">ID</label>
+                                            <div class="col-md-8">
+                                                <input id="ContactID" type="text" class="form-control" placeholder="ID" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fName" class="col-md-4">Name</label>
+                                            <div class="col-md-8">
+                                                <input id="fName" type="text" class="form-control nameLookup contactLookup" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fAddress" class="col-md-4">Address</label>
+                                            <div class="col-md-8">
+                                                <input id="fAddress" type="text" class="form-control addressLookup" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fPhone" class="col-md-4">Phone</label>
+                                            <div class="col-md-8">
+                                               <div class="col-md-8" style="padding-left: 0">
+                                                    <input id="fPhone" type="tel" class="form-control phoneLookup" maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="off">
+                                                    <small class="col-md-12 detailSection">ex. 012-345-6789</small>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    ext:
+                                                </div>
+                                                <div class="col-md-3" style="padding-right: 0">
+                                                    <input id="fPhoneExt1" type="number" class="form-control">
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fEmail" class="col-md-4">Email</label>
+                                            <div class="col-md-8">
+                                                <input id="fEmail" type="email" class="form-control" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <a id="newReset" class="col-md-6 btn btn-default">Reset</a>
+                                            <input id="newSubmit" type="submit" class="col-md-6 btn btn-primary">
+                                        </div>
+                                    </fieldset>
+                                    
+                                    
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">                            
+                            <div id="new-request-sidebar">
+                                <legend><small>Map</small></legend>
+                                <div id="map"></div>
+                                <div id="results" class="hide">
+                                    <p class="section_header">Related Information</p>
+                                    <ul class="nav nav-tabs" role="tablist"><li id="relatedLocation" class="active"><a>Nearby</a></li><li id="relatedRequester"><a>Requester</a></li></ul>
+                                    <div id="newResultsList"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LIST PANE -->
+            <div class="tab-pane" id="list-pane">
+                <div class="container">
+                    <div class="row">
+                        <div class="page-header">
+                            <h1 class="h3" id="rList">Request List</h1>
+                        </div>
+                        <div class="col-md-10">
+                            <p class="text-info">After you change a filter, please press the filter button to the right to update this list.</p>
+                            <div id="request-list"></div>
+                        </div>
+                        <div class="col-md-2">
+                            <div id="request-list-actions">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MAP PANE -->
+            <div class="tab-pane" id="map-pane">
+                <div class="container">
+                    <div class="row">
+                        <div class="page-header">
+                            <h1 class="h3" id="rMap">Request Map</h1>
+                        </div>
+                        <div class="col-md-10">
+                            <div id="request-map-filter"></div>
+                            <div id="request-map"></div>
+                        </div>
+                        <div class="col-md-2">
+                            <div id="request-map-actions"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- DASHBOARD PANE -->
+            <div class="tab-pane" id="dashboard-pane">
+                <div class="container">
+                    <div class="row">
+                        <div class="page-header">
+                            <h1 class="h3" id="phDashbaord">Dashboard</h1>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="request-dashboard"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MANAGE PANE -->
+            <div class="tab-pane" id="manage-pane">
+                <div class="container">
+                    <div class="row">
+                        <div class="page-header">
+                            <h1 class="h3" id="rManage">Request</h1>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="request-manage">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="request-manage-map"></div>
+                            <div id="request-manage-actions"></div>
+                            <div id="request-manage-tools"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="settings-pane">
+                <div class="container">
+                    <div class="row">
+                        <div class="page-header">
+                            <h1 class="h3" id="settings-page-header">Settings</h1>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="settings-main"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal loading" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModal" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="h3 modal-title">Loading</h2>
+                    </div>
+                    <div class="modal-body" style="text-align:center;">
+                        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate" style="font-size:200px; color:#003f5f;"></span>    
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                        <h2 class="h3 modal-title" id="modalTitle"></h2>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        
+                    </div>
+                    <div class="modal-footer" id="modalFooter">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--<script type="text/javascript">djConfig = { parseOnLoad:true, async:false };</script>-->
+        <!--<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLzGUhjx8_Ub9sXuUGsHW8NCLMt2J_zvM&amp;sensor=false">
+    </script>-->
+        <!--<script type="text/javascript" src="./support_files/jquery.min.js"></script>-->
+        <!--<script src="//js.arcgis.com/3.10compact"></script>-->
+        <link rel="stylesheet" href="../libraries/leaflet/leaflet.css" />
+        <script src="../libraries/leaflet/leaflet.js"></script>
+        <script src="../libraries/esri-leaflet/esri-leaflet.js"></script>
+        <script src="../libraries/heatmap.js"></script>
+        <script src="../libraries/leaflet/leaflet-heatmap.js"></script>
+        <script type="text/javascript" src="../libraries/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="../libraries/moment.min.js"></script>
+        <script type="text/javascript" src="../libraries/daterangepicker.js"></script>
+        <link rel="stylesheet" type="text/css" href="../libraries/daterangepicker-bs3.css" />
+        <link rel="stylesheet" href="../libraries/jquery-ui.css">
+        <script src="../libraries/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../libraries/typeahead.bundle.js"></script>
+        <script src="../libraries/jquery.timepicker.js"></script>
+        <!--<script src="http://www.downers.us/public/themes/2014Q4/js/addressLookup.js" type="text/javascript" charset="utf-8"></script>-->
+        <!--<script src="../Libraries/Chart.js"></script>-->
+        <script src="../libraries/highcharts.js"></script>
+        <script src="../libraries/highcharts-exporting.js"></script>
+        <script type="text/javascript" src="./support_files/requests_base.js?v=24"></script>
+        <script type="text/javascript" src="./support_files/requests_emer.js?v=24"></script>
+        <script type="text/javascript" src="./support_files/requests_dashboard.js?v=24"></script>
+        <script type="text/javascript" src="./support_files/requests_admin.js?v=24"></script>
+        <script type="text/javascript" src="./support_files/requests_settings.js?v=24"></script>
+        <script type="text/javascript" src="./support_files/googledrive.js?v=24"></script>
+        <script type="text/javascript" src="./support_files/requests.js?v=24"></script>
+        <script type="text/javascript" src="../libraries/bootstrap/js/bootstrap.min.js"></script>
+		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+        <script src="../Libraries/jspdf.min.js"></script>
+    </body>
+</html>

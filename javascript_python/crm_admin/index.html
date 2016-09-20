@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="http://www.downers.us/favicon.ico">
+        <link href="http://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet" type="text/css">
+        <!--<link rel="stylesheet" href="http://www.downers.us/public/themes/2014Q3/css/styles.css" media="screen" type="text/css">-->
+        <!--<link rel="stylesheet" href="//js.arcgis.com/3.10/js/esri/css/esri.css">-->
+        <link rel="stylesheet" href="./support_files/downers-now-admin.css">
+        <link rel="stylesheet" href="../libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!--<link rel="stylesheet" href="//esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">-->
+        
+        <title>Downers Now Admin Portal</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img style="background-color:White;" alt="Brand" src="http://www.downers.us/public/themes/2014Q4/img/brand_logo.gif">Downers Now Admin Portal</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="notifications-tab" class="active"><a href="#notifications">Notifications</a></li>
+                        <li id="help-tab" class="hidden"><a href="#" target="_blank">Help</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="settings"><a id="userphoto" class="navbar-link"><span>Login</span></a></li>
+                    </ul>
+                </div><!-- /.sidebar-nav navbar-collapse -->
+            </div>
+        </nav>  
+        <div class="container-fluid">
+            <div class="row">
+                <div class="notifications">
+                    <div class="col-md-2 downers-sidebar">
+                        <ul class="nav nav-sidebar" id="taskList">
+                        </ul>
+                    </div>
+                    <div class="col-md-10 main-content">
+                        <h1>General Notification</h1>
+                        <form class="form-horizontal" role="form" action="javascript:sendNotification('general')" id="general-notification">
+                            <fieldset>
+                                <legend>Message Information</legend>
+                                <div class="form-group">
+                                    <label for="Title" class="col-md-4">Title</label>
+                                    <div class="col-md-8">
+                                        <input id="message-title" name="Title" class="form-control" maxlength="50" value="New Message from the Village" required/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Text" class="col-md-4">Message Text</label>
+                                    <div class="col-md-8">
+                                        <input id="message-text" name="Text" class="form-control" maxlength="125" placeholder="Enter a message here" required/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Link" class="col-md-4">Message Link</label>
+                                    <div class="col-md-8">
+                                        <input id="message-link" name="url" class="form-control" maxlength="150" value="http://" required/>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Schedule Message Delivery</legend>
+                                <div class="form-group">
+                                    <label for="SendImmediately" class="col-md-4">Send Immediately</label>
+                                    <div class="col-md-8">
+                                        <input type="checkbox" checked />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="SendDate" class="col-md-4">Send Date</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="message-date" class="datepicker form-control input-md" disabled>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-group submit-padding">
+                                    <input type="submit" class="btn btn-primary pull-right"/>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal loading" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModal" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="h3 modal-title">Loading</h2>
+                    </div>
+                    <div class="modal-body" style="text-align:center;">
+                        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate" style="font-size:200px; color:#003f5f;"></span>    
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                        <h2 class="h3 modal-title" id="modalTitle"></h2>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        
+                    </div>
+                    <div class="modal-footer" id="modalFooter">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--<script type="text/javascript">djConfig = { parseOnLoad:true, async:false };</script>-->
+        <!--<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLzGUhjx8_Ub9sXuUGsHW8NCLMt2J_zvM&amp;sensor=false">
+    </script>-->
+        <!--<script type="text/javascript" src="./support_files/jquery.min.js"></script>-->
+        <!--<script src="//js.arcgis.com/3.10compact"></script>-->
+        <link rel="stylesheet" href="../libraries/leaflet/leaflet.css" />
+        <script src="../libraries/leaflet/leaflet.js"></script>
+        <script src="../libraries/leaflet/esri-leaflet.js"></script>
+        <script src="../libraries/leaflet/heatmap.js"></script>
+        <script src="../libraries/leaflet/leaflet-heatmap.js"></script>
+        <script type="text/javascript" src="../libraries/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="../libraries/moment.min.js"></script>
+        <script type="text/javascript" src="../libraries/daterangepicker.js"></script>
+        <link rel="stylesheet" type="text/css" href="../libraries/daterangepicker-bs3.css" />
+        <link rel="stylesheet" href="../libraries/jquery-ui.css">
+        <script src="../libraries/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../libraries/typeahead.bundle.js"></script>
+        <!--<script src="http://www.downers.us/public/themes/2014Q4/js/addressLookup.js" type="text/javascript" charset="utf-8"></script>-->
+        <!--<script src="../Libraries/Chart.js"></script>-->
+        <script src="../libraries/highcharts.js"></script>
+        <script src="../libraries/highcharts-exporting.js"></script>
+        <script type="text/javascript" src="../libraries/downers-base.js"></script>
+        <script type="text/javascript" src="./support_files/downers-now-admin.js"></script>
+        <script type="text/javascript" src="./support_files/googledrive.js?v=24"></script>
+        <script type="text/javascript" src="../libraries/bootstrap/js/bootstrap.min.js"></script>
+		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+        <script src="../Libraries/jspdf.min.js"></script>
+    </body>
+</html>

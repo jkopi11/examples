@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script>
+    var urlParam;
+    function getPermitNumber(){
+        urlParam = document.location.href;
+        urlParam = urlParam.substring(urlParam.indexOf("?")+1);
+        if (urlParam.length > 0){
+            urlParam = urlParam.split("=");
+            console.log(urlParam);
+        }
+        urlParam = urlParam[1];
+    }
+    
+    function getFileName(){
+        return "Permit_"+urlParam+".igl";
+    }
+    
+    function getFileText(){
+        return "pmPermitEdit\npermit_no = '"+urlParam+"'";
+    }
+    
+    function download(filename, text) {
+      var pom = document.createElement('a');
+      pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      pom.setAttribute('download', filename);
+      pom.click();
+    }
+    getPermitNumber();
+    download(getFileName(),getFileText());
+</script>
+</html>
