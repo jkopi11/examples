@@ -1,0 +1,23 @@
+/* iPhone 5 */
+@media screen and (device-aspect-ratio: 40/71) {
+    .intro-logo{
+        width: 120px;
+        height: 120px;
+    }
+    
+    .spacer {
+        height: 5%;   
+    }
+}
+
+/* iPad */
+@media screen and (device-aspect-ratio: 3/4) {
+    .intro-logo {
+        width: 360px;
+        height: 360px;
+    }
+    
+    .spacer {
+        height: 20%;
+    }
+}

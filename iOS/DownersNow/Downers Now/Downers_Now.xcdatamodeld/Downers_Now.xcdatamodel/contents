@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ConstructionUpdates" representedClassName="ConstructionUpdates" syncable="YES">
+        <attribute name="alerts" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pubDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="viewed" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="DataLastUpdate" representedClassName="DataLastUpdate" syncable="YES">
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Requests" representedClassName="Requests" syncable="YES">
+        <attribute name="alerts" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="requestDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="statusDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="statusText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="submittedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="viewed" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ConstructionUpdates" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="DataLastUpdate" positionX="-54" positionY="36" width="128" height="60"/>
+        <element name="Requests" positionX="-54" positionY="27" width="128" height="180"/>
+    </elements>
+</model>
